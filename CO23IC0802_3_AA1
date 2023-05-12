@@ -1,1 +1,23 @@
+import java.util.Scanner;
 
+public class ProductRating {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int lowerBound = 1;
+        int upperBound = 10;
+
+        System.out.print("Enter the rating (" + lowerBound + "-" + upperBound + ") of the product: ");
+        int rating = scanner.nextInt();
+
+        if (rating < lowerBound || rating > upperBound) {
+            System.out.println("Invalid rating. Rating should be between " + lowerBound + " and " + upperBound + ".");
+        } else if (rating < 5) {
+            System.out.println("The product is classified as Bad.");
+        } else if (rating >= 5 && rating <= 7) {
+            System.out.println("The product is classified as Average.");
+        } else {
+            System.out.println("The product is classified as Good.");
+        }
+    }
+}
